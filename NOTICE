@@ -1,0 +1,27 @@
+/*
+ * Copyright 2021 Edward Loukashevits.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+* The "jackson-databind" library is available under the Apache 2.0 license.
+  https://github.com/FasterXML/jackson-databind
+
+* The "lombok" library is available under the Apache 2.0 license.
+  https://projectlombok.org/
+
+* The 3D_Gress_25701.png icon was taken from icon-icons.com on 2021/06/05. It was created by ChrisL21 (Chris) and distributed under the CC Attribution-NonCommercial-NoDerivs license.
+  https://icon-icons.com/ru/значок/3d-трава/25701
+
+* The 3D_Tree_25679.png icon was taken from icon-icons.com on 2021/06/05. It was created by ChrisL21 (Chris) and distributed under the CC Attribution-NonCommercial-NoDerivs license.
+  https://icon-icons.com/ru/значок/3d-дерево/25697

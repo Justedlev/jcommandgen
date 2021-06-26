@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="455.0" prefWidth="815.0" style="-fx-background-color: #CFCFCF;" stylesheets="@style/style.css" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jcommandgen.controllers.RootController">
+   <Text fx:id="appMessage" layoutX="114.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="587.13671875">
+      <font>
+         <Font size="22.0" />
+      </font>
+   </Text>
+   <AnchorPane fx:id="rootPanel" prefHeight="455.0" prefWidth="815.0" style="-fx-background-color: #43372B;">
+      <Button fx:id="infoButton" layoutX="766.0" layoutY="14.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" styleClass="border-width-5" text="i">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <AnchorPane fx:id="generatorPanel" layoutX="130.0" layoutY="86.0" prefHeight="283.0" prefWidth="551.0">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <styleClass>
+            <String fx:value="shadow" />
+            <String fx:value="panel-style" />
+         </styleClass>
+         <AnchorPane layoutX="19.0" layoutY="24.0" prefHeight="78.0" prefWidth="152.0" styleClass="panel-style">
+            <Text fx:id="minRamTextField" layoutX="15.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Min RAM" textAlignment="CENTER" wrappingWidth="130.0" />
+            <Text id="storageUnit" fx:id="minStorageUnit" layoutX="67.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MB" textAlignment="CENTER" wrappingWidth="32.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Button fx:id="minRamIncrementButton" layoutX="107.0" layoutY="40.0" mnemonicParsing="false" onAction="#minRamIncrementButton" prefHeight="27.0" prefWidth="30.0" text="*2">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="minRamDecrementButton" layoutX="28.0" layoutY="40.0" mnemonicParsing="false" onAction="#minRamDecrementButton" prefHeight="27.0" prefWidth="30.0" text="/2">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <TextField fx:id="minRamValue" layoutX="58.0" layoutY="40.0" prefHeight="27.0" prefWidth="49.0" />
+         </AnchorPane>
+         <AnchorPane layoutX="196.0" layoutY="24.0" prefHeight="94.0" prefWidth="165.0" styleClass="panel-style">
+            <Text fx:id="maxRamTextField" layoutX="15.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Max RAM" textAlignment="CENTER" wrappingWidth="130.0" />
+            <Text id="storageUnit" fx:id="maxStorageUnit" layoutX="67.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MB" textAlignment="CENTER" wrappingWidth="32.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Button fx:id="maxRamIncrementButton" layoutX="107.0" layoutY="40.0" mnemonicParsing="false" onAction="#maxRamIncrementButton" prefHeight="27.0" prefWidth="30.0" text="*2">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="maxRamDecrementButton" layoutX="28.0" layoutY="40.0" mnemonicParsing="false" onAction="#maxRamDecrementButton" prefHeight="27.0" prefWidth="30.0" text="/2">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <TextField fx:id="maxRamValue" layoutX="58.0" layoutY="40.0" prefHeight="27.0" prefWidth="49.0" />
+         </AnchorPane>
+         <AnchorPane layoutX="370.0" layoutY="24.0" prefHeight="104.0" prefWidth="165.0" styleClass="panel-style">
+            <CheckBox fx:id="isGui" accessibleText="z" layoutX="23.0" layoutY="26.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="73.0" text="With GUI">
+               <tooltip>
+                  <Tooltip fx:id="withGuiHint" text="Empty Tooltip" />
+               </tooltip>
+            </CheckBox>
+            <CheckBox fx:id="isIgnore20Sec" layoutX="23.0" layoutY="57.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="121.0" text="Ignore 20 seconds">
+               <tooltip>
+                  <Tooltip fx:id="ignore20SecHint" text="Empty Tooltip" />
+               </tooltip>
+            </CheckBox>
+         </AnchorPane>
+         <AnchorPane layoutX="23.0" layoutY="137.0" prefHeight="33.0" prefWidth="511.0">
+            <rotationAxis>
+               <Point3D />
+            </rotationAxis>
+            <Button fx:id="chooseFileEngineButton" contentDisplay="CENTER" layoutX="348.0" layoutY="1.0" mnemonicParsing="false" onAction="#chooseFileEngineButton" prefHeight="32.0" prefWidth="165.0" styleClass="border-width-5" text="Choose Engine..." textAlignment="CENTER">
+               <font>
+                  <Font name="Consolas" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <rotationAxis>
+                  <Point3D />
+               </rotationAxis>
+            </Button>
+            <Text fx:id="chooseFileEngineText" layoutX="1.0" layoutY="23.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="not-selected" wrappingWidth="340.0">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Text>
+         </AnchorPane>
+         <TextField fx:id="cmdFileName" layoutX="21.0" layoutY="224.0" prefHeight="40.0" prefWidth="340.0" promptText="cmd file name" />
+         <Button fx:id="generateButton" contentDisplay="CENTER" layoutX="371.0" layoutY="224.0" mnemonicParsing="false" onAction="#generateButton" prefHeight="40.0" prefWidth="165.0" styleClass="border-width-5" text="GENERATE_&gt;" textAlignment="CENTER">
+            <font>
+               <Font name="Consolas Bold" size="14.0" />
+            </font>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </Button>
+         <AnchorPane layoutX="25.0" layoutY="180.0" prefHeight="33.0" prefWidth="511.0">
+            <Button fx:id="eulaAgreementButton" contentDisplay="CENTER" layoutX="346.0" layoutY="1.0" mnemonicParsing="false" onAction="#eulaAgreementButton" prefHeight="32.0" prefWidth="165.0" styleClass="border-width-5" text="EULA agreement" textAlignment="CENTER">
+               <font>
+                  <Font name="Consolas" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Text fx:id="eulaFileText" layoutY="23.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="no-selected" wrappingWidth="340.0">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Text>
+         </AnchorPane>
+      </AnchorPane>
+      <ImageView fitHeight="121.0" fitWidth="121.0" layoutX="694.0" layoutY="320.0">
+         <Image url="@assets/3D_Tree_25697.png" />
+      </ImageView>
+      <ImageView fitHeight="121.0" fitWidth="121.0" layoutY="320.0">
+         <Image url="@assets/3D_Tree_25697.png" />
+      </ImageView>
+   </AnchorPane>
+</AnchorPane>
