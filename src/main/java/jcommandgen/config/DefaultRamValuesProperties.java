@@ -5,15 +5,14 @@ import java.util.Optional;
 
 public class DefaultRamValuesProperties {
 
-    public DefaultRamValuesProperties() {
-    }
+    private static final String DEF_RAM_PATH = "jcommandgen";
 
     public Integer getDefaultMinRamValue() throws IOException {
-        return parseInt(JcommandgenProperties.getProperties().getProperty("defaultMinRamValue")).orElse(-1);
+        return parseInt(PropertiesLoader.getProperty(DEF_RAM_PATH, "defaultMinRamValue")).orElse(-1);
     }
 
     public Integer getDefaultMaxRamValue() throws IOException {
-        return parseInt(JcommandgenProperties.getProperties().getProperty("defaultMaxRamValue")).orElse(-1);
+        return parseInt(PropertiesLoader.getProperty(DEF_RAM_PATH, "defaultMaxRamValue")).orElse(-1);
     }
 
     private Optional<Integer> parseInt(String value) {
